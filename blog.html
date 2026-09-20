@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notas, ideias e histórias sobre criatividade e tecnologia.">
+    <title>Entrelinhas | Blog</title>
+    <style>
+        :root {
+            --ink: #17221f;
+            --muted: #62716c;
+            --paper: #f5f1e9;
+            --card: #fffdf8;
+            --accent: #d65a3b;
+            --line: #d9ded6;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .shell {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: .02em;
+        }
+
+        .brand span { color: var(--accent); }
+
+        nav { display: flex; gap: 24px; font-family: Arial, sans-serif; font-size: .9rem; }
+        nav a:hover { color: var(--accent); }
+
+        .intro { padding: 76px 0 54px; max-width: 700px; }
+        .eyebrow {
+            color: var(--accent);
+            font: 700 .76rem Arial, sans-serif;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+        h1 { margin: 14px 0 18px; font-size: clamp(3rem, 7vw, 5.8rem); line-height: .94; letter-spacing: -.05em; }
+        .intro p { margin: 0; color: var(--muted); font: 1.08rem/1.6 Arial, sans-serif; }
+
+        .featured {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            min-height: 330px;
+            margin-bottom: 72px;
+            background: var(--card);
+            border: 1px solid var(--line);
+        }
+
+        .featured-image {
+            min-height: 330px;
+            background: linear-gradient(135deg, rgba(23,34,31,.08), rgba(23,34,31,.25)),
+                url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85") center/cover;
+        }
+
+        .featured-copy { display: flex; flex-direction: column; justify-content: center; padding: 42px; }
+        .featured-copy h2 { margin: 14px 0; font-size: 2.25rem; line-height: 1.04; }
+        .featured-copy p { color: var(--muted); line-height: 1.6; }
+        .read-more { margin-top: 16px; color: var(--accent); font: 700 .85rem Arial, sans-serif; }
+
+        .section-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px; }
+        .section-heading h2 { margin: 0; font-size: 2rem; }
+        .section-heading span { color: var(--muted); font: .82rem Arial, sans-serif; }
+
+        .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding-bottom: 76px; }
+        article { background: var(--card); border: 1px solid var(--line); }
+        .post-image { aspect-ratio: 1.5; background-position: center; background-size: cover; }
+        .image-one { background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=85"); }
+        .image-two { background-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=85"); }
+        .image-three { background-image: url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=700&q=85"); }
+        .post-copy { padding: 24px; }
+        .post-copy small { color: var(--accent); font: 700 .7rem Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+        .post-copy h3 { margin: 12px 0 8px; font-size: 1.45rem; line-height: 1.1; }
+        .post-copy p { margin: 0; color: var(--muted); font: .93rem/1.55 Arial, sans-serif; }
+
+        footer { padding: 24px 0 34px; border-top: 1px solid var(--line); color: var(--muted); font: .82rem Arial, sans-serif; }
+
+        @media (max-width: 720px) {
+            .shell { width: min(100% - 28px, 560px); }
+            header { align-items: flex-start; gap: 18px; }
+            nav { flex-wrap: wrap; justify-content: flex-end; gap: 10px 16px; }
+            .intro { padding: 56px 0 38px; }
+            .featured, .posts { grid-template-columns: 1fr; }
+            .featured-image { min-height: 220px; }
+            .featured-copy { padding: 30px 24px; }
+            .posts { gap: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <header>
+            <a class="brand" href="blog.html">entre<span>linhas</span></a>
+            <nav aria-label="Navegação principal">
+                <a href="blog.html">Blog</a>
+                <a href="index.html">Cadastro</a>
+                <a href="vendas.html">Vendas</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <div class="eyebrow">Ideias para o caminho</div>
+                <h1>Pequenas notas,<br>grandes descobertas.</h1>
+                <p>Um espaço para falar de criatividade, tecnologia e dos detalhes que deixam o trabalho mais humano.</p>
+            </section>
+
+            <a class="featured" href="#artigos">
+                <div class="featured-image" role="img" aria-label="Mesa de trabalho com caderno e café"></div>
+                <div class="featured-copy">
+                    <div class="eyebrow">Em destaque · 6 min de leitura</div>
+                    <h2>Como criar espaço para pensar em um mundo barulhento</h2>
+                    <p>Algumas práticas simples para recuperar a atenção e fazer ideias melhores aparecerem.</p>
+                    <span class="read-more">Ler artigo →</span>
+                </div>
+            </a>
+
+            <section id="artigos" aria-labelledby="artigos-titulo">
+                <div class="section-heading">
+                    <h2 id="artigos-titulo">Últimos artigos</h2>
+                    <span>03 publicações</span>
+                </div>
+                <div class="posts">
+                    <article>
+                        <div class="post-image image-one" role="img" aria-label="Interior iluminado de um escritório"></div>
+                        <div class="post-copy">
+                            <small>Ambiente</small>
+                            <h3>O lugar também participa do processo</h3>
+                            <p>O que muda quando prestamos atenção ao espaço onde as coisas acontecem.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="post-image image-two" role="img" aria-label="Pessoa trabalhando em um notebook"></div>
+                        <div class="post-copy">
+                            <small>Tecnologia</small>
+                            <h3>Ferramentas que desaparecem no uso</h3>
+                            <p>Por que as melhores interfaces parecem naturais e não pedem nossa atenção.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="post-image image-three" role="img" aria-label="Caderno aberto com anotações"></div>
+                        <div class="post-copy">
+                            <small>Processo</small>
+                            <h3>Começar pequeno é uma estratégia</h3>
+                            <p>Uma reflexão sobre rascunhos, ritmo e o valor de fazer a primeira versão.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>© 2026 Entrelinhas · Feito para boas ideias.</footer>
+    </div>
+</body>
+</html>
