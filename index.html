@@ -1,12 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 32px 16px;
+            color: #222;
+        }
+
+        form {
+            display: grid;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        label {
+            display: grid;
+            gap: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            box-sizing: border-box;
+            font: inherit;
+            padding: 10px;
+        }
+
+        button {
+            width: fit-content;
+            cursor: pointer;
+        }
+
+        nav {
+            margin-top: 24px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Pagina Home </h1>
-    <a href="vendas.html">Voltar a página de Vendas</a>
+    <h1>Cadastro de cliente</h1>
+    <p>Preencha os dados abaixo para praticar um formulário HTML.</p>
+
+    <form action="#" method="post">
+        <label for="nome">Nome completo
+            <input type="text" id="nome" name="nome" required>
+        </label>
+
+        <label for="email">E-mail
+            <input type="email" id="email" name="email" required>
+        </label>
+
+        <label for="telefone">Telefone
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+        </label>
+
+        <label for="categoria">Categoria de interesse
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecione uma opção</option>
+                <option value="produtos">Produtos</option>
+                <option value="servicos">Serviços</option>
+                <option value="duvidas">Dúvidas gerais</option>
+            </select>
+        </label>
+
+        <label for="mensagem">Mensagem
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva uma mensagem"></textarea>
+        </label>
+
+        <label>
+            <span><input type="checkbox" name="novidades"> Quero receber novidades</span>
+        </label>
+
+        <button type="submit">Enviar cadastro</button>
+    </form>
+
+    <nav>
+        <a href="vendas.html">Ir para a página de vendas</a>
+    </nav>
 </body>
 </html>
